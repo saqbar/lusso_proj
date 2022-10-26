@@ -5,7 +5,7 @@
 @endsection
 @section('menu')
     <li class="nav-item">
-        <a href="" class="nav-link srift">
+        <a href="{{route('auth_form')}}" class="nav-link srift">
             <img src="icons/registration_50px.png" width=25px; id="iconVHOD" alt="">Войти</a>
 @endsection
 
