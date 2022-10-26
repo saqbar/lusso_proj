@@ -1,0 +1,43 @@
+*{text-decoration: none ;}
+
+#grayfonall{
+  height: 470px !important;
+}
+#grayfon{
+  height: 450px ;
+  width: 100%;
+  z-index: 1;
+}
+#fontext{
+  top: -400px;
+  z-index: 2;
+}
+#fontext h1,p{
+  margin: 20px;
+}
+.fontextP{color: aliceblue;}
+.fonttextPP{ font-size: 18px; }
+#fontext{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px){
+  #fontext{
+    margin-left: 27%;
+    width: 600px;
+  }
+}
+
+.sect{
+
+  background-color: #787878;
+  padding: 40px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+.sectCol{color: #f8f8f8;}

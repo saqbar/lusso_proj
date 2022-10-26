@@ -1,0 +1,33 @@
+#wraper_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    border: 2px solid gray;
+    border-radius: 15px;
+    margin: 15px 50px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none ; color: #555555 ;
+    width: 310px;
+}
+
+
+.card h4, p{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+.card:hover{
+    border: 2px ridge #948b7f;
+    box-shadow: 5px 5px 15px #7f746a;
+    display: flex;
+    text-decoration: none ; color: #555555 ;
+}
+
+.card input{border-radius: 5px; margin-top: 5px; font-size: 1em;}
+.card input:hover{border: 2px solid #948b7f; box-shadow: 5px 5px 15px #7f746a;color: #7f746a;}

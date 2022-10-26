@@ -1,0 +1,135 @@
+
+
+/* карточки категорий */
+#wraper_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    border: 2px solid gray;
+    border-radius: 15px;
+    margin: 15px 50px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none ; color: #555555 ;
+}
+
+
+.card h4, p{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+.card:hover{
+    border: 2px ridge #948b7f;
+    box-shadow: 5px 5px 15px #7f746a;
+    display: flex;
+    text-decoration: none ; color: #555555 ;
+}
+
+.card input{border-radius: 5px; margin-top: 5px; font-size: 1em;}
+.card input:hover{border: 2px solid #948b7f; box-shadow: 5px 5px 15px #7f746a;color: #7f746a;}
+
+
+/* конец карточек категорий */
+
+       /* Слайдер */
+#carus{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 80px 40px 40px 40px ;
+}
+#carus p{
+  width: 170px;
+  margin-left: 50px;
+}
+
+#onlM{
+  margin-top: 50px;
+}
+
+/* почему мы */
+#Ww{
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.gos{
+  margin: 20px;
+}
+
+.dd{
+  font-family: Niagara !important;
+    color: aliceblue !important;
+}
+.ddd{
+  font-family: Arial !important;
+    color: aliceblue !important;
+}
+.Mycard{
+  border-style:none !important;
+  margin: 10px;
+}
+
+.btnVU{
+    color: aliceblue !important;
+    font-family: Arial !important;
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+}
+.btnVU:hover{
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: #282c34 !important;
+}
+
+/* @media (min-width: 576px)
+.col-sm-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%; */
+
+
+.bord{
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px #7f746a !important;
+padding: 7px;
+margin-top: 20px;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////*/
+#banner_section{
+    border: black;
+    height: 700px;
+    width: 100%;
+    background-image: url("../images/baner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+#logo_banner{
+    position: relative;
+    margin: 13% 5% auto auto;
+    text-align: end;
+}
+#logo_banner a{
+    color: aliceblue !important;
+    font-family: Arial !important;
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    font-size: 1.5em;
+    padding: 7px;
+}
+#logo_banner a:hover{
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: #282c34 !important;
+}

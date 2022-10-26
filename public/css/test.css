@@ -1,0 +1,26 @@
+@charset "utf-8"; /*говорим что в стилях пишем в utf-8*/
+*{margin: 0;padding: 0; outline: none;font-size: 1em;} /*отступы=0  и нет обводки у поисковика */
+a{text-decoration: none; color: black;}    /* убирает подчеркивание в ссылках*/
+
+.navbar-brad img{
+  width: 150px;
+}
+
+.navbar-nav li{
+  padding-right: 30px;
+
+}
+.navbar-link{font-size: 1.1em !important}
+
+.baner{
+
+}
+#wraper_cardTest{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}
+
+.card{width: 350px;}

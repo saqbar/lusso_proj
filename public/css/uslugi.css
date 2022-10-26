@@ -1,0 +1,23 @@
+#leftimg {
+
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
+#leftimgtext{
+  padding-top: 90px;
+  margin-left: 50px;
+}
+
+#leftimgtext h1,p{
+  /* color: aliceblue; */
+  width: 350px;
+  margin-right: 30px;
+
+}
+
+#hgz{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin: 0px 0px 50px 0px ;
+/* background-image: url("images/grayfon.jpg"); */
+}

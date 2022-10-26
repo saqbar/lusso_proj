@@ -1,0 +1,32 @@
+*{text-decoration: none ;}
+
+#grayfonall{
+  height: 450px;
+}
+#grayfon{
+  height: 450px ;
+  width: 100%;
+  z-index: 1;
+}
+#fontext{
+  top: -400px;
+  z-index: 2;
+}
+#fontext h1,h6{
+  color: aliceblue !important;
+}
+#fontext a{
+  border: 2px solid aliceblue;
+  border-radius: 15px;
+  padding: 10px;
+  color: aliceblue !important;
+}
+#fontext a:hover{
+  border: 1px solid aliceblue;
+  border-radius: 15px;
+  background-color: aliceblue;
+  color: #282c34 !important
+}
+#fontextspan{
+  font-size: 20px;
+}

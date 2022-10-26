@@ -1,0 +1,11 @@
+#secContacts{
+margin: 25px;
+}
+.marginsCont{margin-bottom: 15px;}
+.colorContGR{color: gray ;}
+.carta{
+  border: 2px solid black;
+  height: 300px;
+  width: 300px;
+  background-color: gray;
+}

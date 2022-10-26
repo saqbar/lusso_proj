@@ -1,0 +1,68 @@
+@charset "utf-8"; /*говорим что в стилях пишем в utf-8*/
+*{margin: 0;padding: 0; outline: none !important;font-size: 1em;} /*отступы=0  и нет обводки у поисковика */
+body{text-align: center !important; }
+a{text-decoration: none !important; color: black !important;}    /* убирает подчеркивание в ссылках*/
+a:hover{text-decoration: none!important; color: #4a5568;}
+/* Fonts */
+@font-face {
+font-family:'Niagara';
+src: url('/fonts/niagara.ttf') format('ttf');
+
+}
+@font-face {
+font-family:'Arial';
+src: url('/fonts/arial.ttf') format('ttf');
+font-style: normal;
+font-weight: normal;
+}
+
+.navbar-brad img{
+  width: 150px;
+}
+
+.navbar-nav li{
+  padding-right: 40px;
+
+}
+.navbar-link{font-size: 1.1em !important}
+
+.hd{
+  background-color: #f2f2f2 !important
+}
+
+.menu{
+  color: black !important
+}
+
+.ro{margin-left: 30px;}
+/* @media screen and (min-width: 800px) {
+  .ro{
+    position: relative;
+    left: 50% !important;
+  }
+} */
+
+
+/* ссылки меню */
+/* .sriftt{
+  margin-left: 10px;
+  margin-right: 10px;
+} */
+/* кнопка наверх */
+.footer{
+  background-color: #767676;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.footerColor{color: aliceblue !important;}
+
+.categUsl{
+  display: flex;
+  flex-direction: column;
+}
+
+.sotS{margin-bottom: 15px;}
+/*////////////////////////////////////////////////////////////////////*/
+.t_align_c{text-align: center;}
