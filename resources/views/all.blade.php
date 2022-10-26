@@ -67,7 +67,7 @@
                     <a href="{{route('about')}}" class="nav-link srift">О нас</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Контакты</a>
+                    <a href="{{route('contacts')}}" class="nav-link">Контакты</a>
                 </li>
                 @yield('basket')
                 @yield('menu')

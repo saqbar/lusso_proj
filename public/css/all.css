@@ -66,3 +66,17 @@ font-weight: normal;
 .sotS{margin-bottom: 15px;}
 /*////////////////////////////////////////////////////////////////////*/
 .t_align_c{text-align: center;}
+
+
+
+/*////////////////////////////////////////////////////////////////////*/
+/*стили для формы аутентификации*/
+.form_login_admin{
+    width: 350px;
+    margin: 50px 35%;
+    text-align: center;
+}
+
+#link_reg{
+    margin: 15px;
+}
