@@ -2,26 +2,17 @@
 
 #grayfonall{
   height: 470px !important;
-}
-#grayfon{
-  height: 450px ;
-  width: 100%;
-  z-index: 1;
+    background-image: url("../images/grayfon.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
 }
 #fontext{
-  top: -400px;
-  z-index: 2;
+    position: relative;
+    margin: 10% 5% auto auto;
 }
 #fontext h1,p{
-  margin: 20px;
-}
-.fontextP{color: aliceblue;}
-.fonttextPP{ font-size: 18px; }
-#fontext{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-    justify-content: center;
+    color: aliceblue;
 }
 
 @media screen and (min-width: 900px){
@@ -32,7 +23,6 @@
 }
 
 .sect{
-
   background-color: #787878;
   padding: 40px 20px 30px 20px;
   display: flex;
