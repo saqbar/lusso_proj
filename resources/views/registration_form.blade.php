@@ -8,7 +8,7 @@
 @section('content')
 
 
-    <form class="form_login_admin" method="post" action="" >
+    <form class="form_login_reg" method="post" action="{{route('execute_form_reg')}}" >
         @csrf
         <h1>Зарегистрируйтесь</h1>
         <div class="mb-3" >
@@ -25,7 +25,7 @@
         </div>
         <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Пароль:</label>
-            <input type="password" class="form-control" id="formGroupExampleInput4" required minlength="5" maxlength="17" placeholder="пароль" name="pass">
+            <input type="password" class="form-control" id="formGroupExampleInput4" required minlength="5" maxlength="17" placeholder="пароль" name="password">
         </div>
 
         <button type="submit" class="btn btn-primary">Подтвердить</button>

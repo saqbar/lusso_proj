@@ -15,5 +15,11 @@ class RouteController extends Controller
     public function contacts(){
         return view('contacts');
     }
+    public function private_page(){
+        return view('private_page ');
+    }
+    public function tmp(){
+        return view('tmp');
+    }
 
 }

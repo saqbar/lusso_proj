@@ -109,7 +109,7 @@ margin-top: 20px;
     border: black;
     height: 700px;
     width: 100%;
-    background-image: url("../images/baner.jpg");
+    background-image: url("../images/baner.jpg")!important;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

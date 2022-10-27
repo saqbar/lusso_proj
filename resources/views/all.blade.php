@@ -61,7 +61,7 @@
                     <a href="{{route('home')}}#usl" class="nav-link srift">Наши услуги</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link srift">Магазин</a>
+                    <a href="{{route('shop')}}" class="nav-link srift">Магазин</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('about')}}" class="nav-link srift">О нас</a>

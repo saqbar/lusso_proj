@@ -1,16 +1,16 @@
 *{text-decoration: none ;}
 
 #grayfonall{
-  height: 450px;
+    height: 470px !important;
+    background-image: url("../images/grayfon.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
 }
-#grayfon{
-  height: 450px ;
-  width: 100%;
-  z-index: 1;
-}
+
 #fontext{
-  top: -400px;
-  z-index: 2;
+    position: relative;
+    margin: 10% 5% auto auto;
 }
 #fontext h1,h6{
   color: aliceblue !important;

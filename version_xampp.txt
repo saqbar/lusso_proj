@@ -1,0 +1,5 @@
+PHP Version 7.4.29
+Apache 2.4.53
+phpMyAdmin 5.2.0
+OpenSSL 1.1.1
+MariaDB 10.4.24
