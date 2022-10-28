@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RouteController extends Controller
 {
@@ -19,7 +20,12 @@ class RouteController extends Controller
         return view('private_page ');
     }
     public function tmp(){
-        return view('tmp');
+
+        $user = Auth::user();
+        if($user['login']=='admin'){return view('tmp');}
     }
 
+    public function my_account(){
+        return view('my_account');
+    }
 }

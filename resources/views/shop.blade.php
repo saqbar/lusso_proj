@@ -11,7 +11,7 @@
             <img src="icons/shopping_bag_50px.png" width=25px; id="iconVHOD" alt="">Корзина</a>
 @endsection
 
-        @section('menu')
+@section('menu')
             <?php
             if(\Illuminate\Support\Facades\Auth::check()){
                 echo '<li class="nav-item">';
@@ -22,7 +22,7 @@
                 echo '<a href="/public/auth"class="nav-link srift">';
                 echo '<img src="icons/registration_50px.png" width=25px; id="iconVHOD" alt="">Войти</a>';}
             ?>
-        @endsection
+@endsection
 
 @section('content')
 
@@ -37,7 +37,7 @@
                         Качественная селекция профессиональных косметических уходовых средств,  Проверенная годами работы нашими мастерами,
                         Идеально подобранная именно для Вас...
                     </h6><br><br>
-                    <a href="#" >Перейти в каталог <span id="fontextspan">--></span> </a>
+                    <a href="#" >Перейти в каталог </a>
                 </div>
             </section>
             <br>

@@ -71,6 +71,16 @@
                 </li>
                 @yield('basket')
                 @yield('menu')
+                <?php
+                    if(\Illuminate\Support\Facades\Auth::user()) {              // проверяем аутент ли мы
+                        $user = \Illuminate\Support\Facades\Auth::user();       // получаем login auth
+                        $db_users = \Illuminate\Support\Facades\DB::select('select * from admin_users'); // login из БД
+                        foreach ($db_users as $usr) {
+                            if($usr->login==$user['login']){                // если auth = login из БД admin_users
+                                echo '<a href="#" class="nav-link">Админка</a>';
+                            }
+                        }
+                    }?>
                 <li class="nav-item ro">
                     <a href="#" class="nav-link">RO</a>
                 </li>

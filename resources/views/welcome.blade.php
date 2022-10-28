@@ -11,8 +11,9 @@
     <?php
         if(\Illuminate\Support\Facades\Auth::check()){
             echo '<li class="nav-item">';
-            echo '<a href="/public/logout"class="nav-link srift">';
-            echo '<img src="icons/registration_50px.png" width=25px; id="iconVHOD" alt="">Выйти из учетной записи</a>';
+            echo '<a href="/public/account"class="nav-link srift">';
+            echo '<img src="icons/registration_50px.png" width=25px; id="iconVHOD" alt="">Личный кабинет</a></li>';
+
         }else{
         echo '<li class="nav-item">';
         echo '<a href="/public/auth"class="nav-link srift">';

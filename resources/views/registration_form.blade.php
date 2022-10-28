@@ -27,6 +27,10 @@
             <label for="formGroupExampleInput2" class="form-label">Пароль:</label>
             <input type="password" class="form-control" id="formGroupExampleInput4" required minlength="5" maxlength="17" placeholder="пароль" name="password">
         </div>
+        <div class="mb-3" >
+            <label for="formGroupExampleInput" class="form-label">Телефон:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput3" required minlength="8" maxlength="12" placeholder="телефон" name="telefon">
+        </div>
 
         <button type="submit" class="btn btn-primary">Подтвердить</button>
         <div id="link_reg"><a href="{{route('auth_form')}}">Или войдите</a></div>

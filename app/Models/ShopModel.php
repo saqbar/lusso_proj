@@ -5,17 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
-
-class TestModel extends Model
+class ShopModel extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-        'name', 'surname','login', 'password','remember_token'];
-    public function setPasswordAttribute($password){
+        'login', 'password'
+    ];
+    protected $table = 'admin_users';
+
+    public function setPasswordAttribute($password){                        // хэширует вводимый пароль из формы
         $this->attributes['password'] = Hash::make($password);
     }
-    protected $table = 'my_users';
 
 
 }
