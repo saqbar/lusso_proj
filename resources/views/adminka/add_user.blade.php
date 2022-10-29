@@ -1,11 +1,25 @@
 @extends('adminka/adminka_all')
 @section('title', 'add_user')
 @section('style')
-    .form_login_admin{ text-align: center}
+    .form_login_admin{ text-align: center; margin-top:20px; margin-bottom:30px;}
     .inp {margin: 15px; text-align: center;}
+@endsection
+@section('menu')
+    <?php
+    if(\Illuminate\Support\Facades\Auth::check()){
+        echo '<li class="nav-item">';
+        echo '<a href="/public/logout"class="nav-link srift">';
+        echo '<img src="icons/registration_50px.png" width=25px; id="iconVHOD" alt="">Выйти из учетной записи</a>';
+
+    }else{
+        echo '<li class="nav-item">';
+        echo '<a href="/public/auth"class="nav-link srift">';
+        echo '<img src="icons/registration_50px.png" width=25px; id="iconVHOD" alt="">Войти</a>';}
+    ?>
 @endsection
 
 @section('content')
+
 <form class="form_login_admin" method="post" action="{{route('execute_add_user')}}" >
     @csrf
     <h1>добавление пользователя в админку:</h1>
@@ -19,7 +33,9 @@
     </div>
     <button type="submit" class="btn btn-primary">Подтвердить</button>
 </form>
-<section>
+
+
+<section class="form_login_admin">
     <h1>Пользователи админки:</h1>
 <?php
 $users_admin= \Illuminate\Support\Facades\DB::select('select * from admin_users');

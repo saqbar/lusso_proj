@@ -51,7 +51,48 @@ class AdminkaController extends Controller
             return redirect(route('adminka_show_reg_usr'));
         }
     }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    public function add_shop_category_product(){
+        return view('adminka/add_shop_category_product');
+    }
+    public function execute_add_shop_category_product(Request $request){
+        $name = $request['name'];
+        DB::insert('insert into category_product (name) values (?)',[$name]);
+        return redirect(route('add_shop_category_product'));
+    }
+    public function execute_edit_shop_category_product(Request $request){
+        if($request['update']){
+            DB::table('category_product')->where('id',$request['id'])->update([
+                'name'=>$request['name'],
+            ]);
+            return redirect(route('add_shop_category_product'));
+        }
+        if($request['delete']){
+            DB::table('category_product')->where('id', $request['id'])->delete();
+            return redirect(route('add_shop_category_product'));
+        }
+    }
 
+
+
+
+    public function add_shop_product(){
+        return view('adminka/add_shop_product');
+    }
+    public function execute_add_shop_product(Request $request){
+        $category = $request['category'];
+        $id_of_product = $request['id_of_product'];
+        $name = $request['name'];
+        $volume = $request['volume'];
+        $price = $request['price'];
+        $description = $request['description'];
+        $sql=DB::insert('insert into products (category, id_of_product,name,volume,price,description)
+                                values (?,?,?,?,?,?)',[$category,$id_of_product,$name,$volume,$price,$description]);
+        return redirect(route('add_shop_product'));
+    }
+    public function edit_all_product(){
+        return view('adminka/edit_all_product');
+    }
 
 
 

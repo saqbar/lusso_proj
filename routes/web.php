@@ -43,6 +43,13 @@ Route::controller(AdminkaController::class)->middleware('auth')->group(function 
     Route::get('adminka/show_reg_usr', 'show_reg_usr')->name('adminka_show_reg_usr');
     Route::post('adminka/adminka_edit_reg_usr', 'edit_reg_usr')->name('adminka_edit_reg_usr');
 
+    Route::get('adminka/add_shop_category_product', 'add_shop_category_product')->name('add_shop_category_product');
+    Route::post('adminka/execute_add_shop_category_product', 'execute_add_shop_category_product')->name('execute_add_shop_category_product');
+    Route::post('adminka/execute_edit_shop_category_product', 'execute_edit_shop_category_product')->name('execute_edit_shop_category_product');
+
+    Route::get('adminka/add_shop_product', 'add_shop_product')->name('add_shop_product');
+    Route::post('adminka/execute_add_shop_product', 'execute_add_shop_product')->name('execute_add_shop_product');
+    Route::get('adminka/edit_all_product', 'edit_all_product')->name('edit_all_product');
 });
 ///////////////////////////////////////////////////////////////////////////////
 Route::get('/tmp', [RouteController::class, 'tmp'])->name('tmp');
