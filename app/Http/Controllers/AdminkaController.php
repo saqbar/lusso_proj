@@ -33,4 +33,26 @@ class AdminkaController extends Controller
             return redirect(route('add_user'));
         }
     }
+    public function show_reg_usr(){
+        return view('adminka/adminka_show_reg_usr');
+    }
+    public function edit_reg_usr(Request $request){
+        if($request['update']){
+            DB::table('users')->where('id',$request['id'])->update([
+                'name'=>$request['name'],
+                'surname'=>$request['surname'],
+                'login'=>$request['login'],
+                'telefon'=>$request['telefon'],
+            ]);
+            return redirect(route('adminka_show_reg_usr'));
+        }
+        if($request['delete']){
+            DB::table('users')->where('id', $request['id'])->delete();
+            return redirect(route('adminka_show_reg_usr'));
+        }
+    }
+
+
+
+
 }

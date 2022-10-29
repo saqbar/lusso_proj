@@ -1,4 +1,4 @@
-@extends('all')
+@extends('adminka/adminka_all')
 @section('title', 'Админка')
 @section('menu')
     <?php
@@ -16,6 +16,7 @@
 
 @section('content')
 <div>
-    <h3><a href="{{route('add_user')}}">добавление польз в админку</a></h3>
+    <h5><a href="{{route('add_user')}}">добавление польз в админку</a></h5>
+    <h5><a href="{{route('adminka_show_reg_usr')}}">пользователи</a></h5>
 </div>
 @endsection
