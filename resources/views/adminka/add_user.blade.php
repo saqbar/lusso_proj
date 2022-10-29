@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
     <!-- end bootstrap@ 5.2 -->
     <style>
         .form_login_admin{ text-align: center}
+        .inp {margin: 15px; text-align: center;}
     </style>
 </head>
 <body>
@@ -21,21 +23,36 @@
     @csrf
     <h1>добавление пользователя в админку:</h1>
     <div class="mb-3" >
-        <label for="formGroupExampleInput" class="form-label">Логин:</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="логин" name="login">
-
+        <h5>Логин:</h5>
+        <input type="text" class="" style="width: 305px;" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="логин" name="login">
     </div>
-    <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Пароль:</label>
-        <input type="password" class="form-control" id="formGroupExampleInput2" required minlength="5" maxlength="17" placeholder="пароль" name="password">
-
+    <div class="mb-3 inp">
+        <h5>Пароль:</h5>
+        <input type="password" class=" " style="width: 305px;" id="formGroupExampleInput2" required minlength="5" maxlength="17" placeholder="пароль" name="password">
     </div>
     <button type="submit" class="btn btn-primary">Подтвердить</button>
-
-
 </form>
+<section>
+    <h1>Пользователи админки:</h1>
+<?php
+$users_admin= \Illuminate\Support\Facades\DB::select('select * from admin_users');
+foreach ($users_admin as $usr){
+    echo '<form class="form_login_admin" action="edit_add_user" method="post">'; ?>
+    @csrf  <?php
+    echo 'id:';
+    echo '<input type="text" name="id" class="inp" style="width: 105px;" value="'.$usr->id.'">';
+    echo 'login:';
+    echo '<input type="text" name="login" class="inp" style="width: 105px;" value="'.$usr->login.'">';
+    echo 'pass:';
+    echo '<input type="text" name="password" class="inp" style="width: 397px;" value="'.$usr->password.'">';
+    echo '<button type="submit" class="inp btn btn-primary" name="update" value="update">Изменить</button>';
+    echo '<button type="submit" class="inp btn btn-primary" name="delete" value="delete">Удалить</button>';
+    echo "<hr>";
+    echo '</form>';
+}
+?>
 
-
+</section>
 
 <!-- bootstrap@ 5.2 -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

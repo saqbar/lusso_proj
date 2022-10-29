@@ -77,7 +77,7 @@
                         $db_users = \Illuminate\Support\Facades\DB::select('select * from admin_users'); // login из БД
                         foreach ($db_users as $usr) {
                             if($usr->login==$user['login']){                // если auth = login из БД admin_users
-                                echo '<a href="#" class="nav-link">Админка</a>';
+                                echo '<a href="/public/adminka" class="nav-link">Админка</a>';
                             }
                         }
                     }?>

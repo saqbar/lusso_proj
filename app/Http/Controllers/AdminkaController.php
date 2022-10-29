@@ -23,4 +23,14 @@ class AdminkaController extends Controller
             return redirect(route('adminka_index'));
         }
     }
+    public function edit_add_user(Request $request){
+        if($request['update']){
+            DB::table('admin_users')->where('id',$request['id'])->update(['login'=>$request['login']]);
+            return redirect(route('add_user'));
+        }
+        if($request['delete']){
+            DB::table('admin_users')->where('id', $request['id'])->delete();
+            return redirect(route('add_user'));
+        }
+    }
 }

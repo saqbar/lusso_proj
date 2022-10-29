@@ -40,6 +40,7 @@ Route::controller(AdminkaController::class)->group(function (){
     Route::get('/adminka','adminka_index')->name('adminka_index');
     Route::get('/adminka/add_user', 'add_user')->name('add_user');
     Route::post('/adminka/execute_add_user', 'execute_add_user')->name('execute_add_user');
+    Route::post('/adminka/edit_add_user', 'edit_add_user')->name('edit_add_user');
 });
 ///////////////////////////////////////////////////////////////////////////////
 Route::get('/tmp', [RouteController::class, 'tmp'])->name('tmp');
