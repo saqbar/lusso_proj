@@ -32,6 +32,8 @@ Route::controller(RegistrationController::class)->group(function(){
 /// shop
 Route::controller(ShopController::class)->group(function(){
     Route::get('/shop','shop_index')->name('shop');
+    Route::get('/{categ}', 'show_prod_of_categ')->name('show_prod_of_categ');
+    Route::get('/{product}', 'show_product')->name('show_product');
 });
 ///////////////////////////////////////////////////////////////////////////////
 /// adminka

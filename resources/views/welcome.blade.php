@@ -37,7 +37,7 @@
 
  <div class="bord">
      <h1 class="" style="text-align: center;">Команда "Lusso"</h1>
-     <a href="" style="text-align: center;"><h4>Отправь свое CV и найди работу мечты</h4></a>
+     <a href="{{route('about')}}" style="text-align: center;"><h4>Отправь свое CV и найди работу мечты</h4></a>
  </div>
 
 {{--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    --}}
@@ -95,22 +95,22 @@
                     <div class="carousel-item active">
                         <img src="images/noname.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h5 style="color: black"><a href="{{route('shop')}}">Онлайн магазин</a></h5>
+                            <p style="color: black">Самые лучшие товары и бла бла бла</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="images/noname.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h5 style="color: black"><a href="{{route('shop')}}">Онлайн магазин</a></h5>
+                            <p style="color: black">Еще бла бла бла</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="images/noname.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h5 style="color: black"><a href="{{route('shop')}}">Онлайн магазин</a></h5>
+                            <p style="color: black">И еще чуть чуть бла бла бла</p>
                         </div>
                     </div>
                 </div>

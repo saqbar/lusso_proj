@@ -2,7 +2,7 @@
 @section('title', 'Магазин')
 @section('header')
     <link rel="stylesheet" href="css/shop.css" media="screen">
-
+    <link rel="stylesheet" href="css/welcome.css" media="screen">
 @endsection
 
 @section('basket')
@@ -43,15 +43,15 @@
             <br>
 
 
-{{--            <div id="wraper_cardTest">--}}
-{{--                @foreach($allproduct as $category)--}}
+            <div id="wraper_card">
+                @foreach($allcategory as $category)
 
-{{--                    <a href="{{route('categorytoprod', $category->name)}}" class="card">--}}
-{{--                        <img src="images/g.jpg" alt="" width="300" height="300">--}}
-{{--                        <h4>{{ $category->name }}</h4>--}}
-{{--                    </a>--}}
-{{--                @endforeach--}}
-{{--            </div>--}}
+                    <a href="{{route('show_prod_of_categ', $category->name)}}" class="card">
+                        <img src="images/g.jpg" alt="" width="300" height="300" class="img-fluid">
+                        <h4>{{ $category->name }}</h4>
+                    </a>
+                @endforeach
+            </div>
 
 
 
