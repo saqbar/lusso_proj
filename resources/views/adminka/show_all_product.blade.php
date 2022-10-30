@@ -24,7 +24,7 @@
         <?php
         $users_admin= \Illuminate\Support\Facades\DB::select('select * from products');
         foreach ($users_admin as $usr){
-            echo '<form class="form_login_admin" action="" method="post">'; ?>
+            echo '<form class="form_login_admin" action="edit_all_product" method="post">'; ?>
         @csrf  <?php
                    echo 'id:';
                    echo '<input type="text" name="id" class="inp" style="width: 105px;" value="'.$usr->id.'">';

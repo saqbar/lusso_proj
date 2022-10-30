@@ -73,11 +73,11 @@ class AdminkaController extends Controller
         }
     }
 
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
+// добавить продукцию
     public function add_shop_product(){
-        return view('adminka/add_shop_product');
+        $categories = DB::select('select * from category_product');
+        return view('adminka/add_shop_product',['allcategory'=>$categories]);
     }
     public function execute_add_shop_product(Request $request){
         $category = $request['category'];
@@ -90,8 +90,26 @@ class AdminkaController extends Controller
                                 values (?,?,?,?,?,?)',[$category,$id_of_product,$name,$volume,$price,$description]);
         return redirect(route('add_shop_product'));
     }
-    public function edit_all_product(){
-        return view('adminka/edit_all_product');
+    // Все товары
+    public function show_all_product(){
+        return view('adminka/show_all_product');
+    }
+    public function edit_all_product(Request $request){
+        if($request['update']){
+            DB::table('products')->where('id',$request['id'])->update([
+                'category' => $request['category'],
+                'id_of_product' => $request['id_of_product'],
+                'name' => $request['name'],
+                'volume' => $request['volume'],
+                'price' => $request['price'],
+                'description' => $request['description'],
+            ]);
+            return redirect(route('show_all_product'));
+        }
+        if($request['delete']){
+            DB::table('products')->where('id', $request['id'])->delete();
+            return redirect(route('show_all_product'));
+        }
     }
 
 

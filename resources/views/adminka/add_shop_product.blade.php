@@ -24,7 +24,12 @@
 
         <div class="mb-3" >
             <h5>Категория:</h5>
-            <input type="text" class="" style="width: 305px;" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="категория" name="category">
+            <select class="" aria-label="Default select example" name="category" style="width: 305px; text-align: center;padding: 3px;">
+                <option selected name="def">выберите категорию товара</option>
+                @foreach ($allcategory as $category)
+                <option value="{{$category->name}}" name="{{$category->name}}">{{$category->name}}</option>
+                @endforeach
+            </select>
         </div>
         <div class="mb-3" >
             <h5>id продукта:</h5>
@@ -36,11 +41,11 @@
         </div>
         <div class="mb-3" >
             <h5>Обьем:</h5>
-            <input type="text" class="" style="width: 305px;" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="обьем" name="volume">
+            <input type="text" class="" style="width: 305px;" id="formGroupExampleInput"  minlength="1" maxlength="10" placeholder="обьем" name="volume">
         </div>
         <div class="mb-3" >
             <h5>Цена:</h5>
-            <input type="text" class="" style="width: 305px;" id="formGroupExampleInput" required minlength="3" maxlength="10" placeholder="цена" name="price">
+            <input type="text" class="" style="width: 305px;" id="formGroupExampleInput"  minlength="3" maxlength="10" placeholder="цена" name="price">
         </div>
         <div class="mb-3" >
             <h5>Описание:</h5>
