@@ -1,4 +1,4 @@
-@extends('all')
+@extends('/all')
 @section('title', 'Магазин')
 @section('header')
     <link rel="stylesheet" href="css/shop.css" media="screen">
@@ -8,7 +8,7 @@
 @section('basket')
     <li class="nav-item">
         <a href="" class="nav-link srift">
-            <img src="icons/shopping_bag_50px.png" width=25px; id="iconVHOD" alt="">Корзина</a></li>
+            <img src="../icons/shopping_bag_50px.png" width=25px; id="iconVHOD" alt="">Корзина</a></li>
 @endsection
 
 @section('menu')
@@ -30,7 +30,7 @@
     <div id="wraper_card">
         @foreach($allproducts as $product)
 
-            <a href="{{route('show_product', $product->id_of_product)}}" class="card">
+            <a href="{{route('show_product', ['id_of_product'=>$product->id_of_product])}}" class="card">
                 <img src="images/g.jpg" alt="" width="300" height="300" class="img-fluid">
                 <h4>{{ $product->name }}</h4>
                 @if($product->volume)

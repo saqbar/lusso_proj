@@ -46,7 +46,7 @@
             <div id="wraper_card">
                 @foreach($allcategory as $category)
 
-                    <a href="{{route('show_prod_of_categ', $category->name)}}" class="card">
+                    <a href="{{route('show_prod_of_categ', ['category'=>$category->name])}}" class="card">
                         <img src="images/g.jpg" alt="" width="300" height="300" class="img-fluid">
                         <h4>{{ $category->name }}</h4>
                     </a>

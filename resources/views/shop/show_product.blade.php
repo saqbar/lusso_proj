@@ -1,3 +1,4 @@
+@extends('/all')
 @section('header')
     <link rel="stylesheet" href="css/shop.css" media="screen">
     <link rel="stylesheet" href="css/welcome.css" media="screen">
@@ -23,4 +24,11 @@
 @endsection
 
 @section('content')
+    @foreach($prod as $product)
 
+<h1>{{$product->name}}</h1>
+
+
+
+    @endforeach
+@endsection

@@ -32,8 +32,8 @@ Route::controller(RegistrationController::class)->group(function(){
 /// shop
 Route::controller(ShopController::class)->group(function(){
     Route::get('/shop','shop_index')->name('shop');
-    Route::get('/{categ}', 'show_prod_of_categ')->name('show_prod_of_categ');
-    Route::get('/{product}', 'show_product')->name('show_product');
+    Route::get('/category/', 'show_prod_of_categ')->name('show_prod_of_categ');
+    Route::get('/product/', 'show_product')->name('show_product');
 });
 ///////////////////////////////////////////////////////////////////////////////
 /// adminka
@@ -56,4 +56,4 @@ Route::controller(AdminkaController::class)->middleware('auth')->group(function 
     Route::post('adminka/edit_all_product', 'edit_all_product')->name('edit_all_product');
 });
 ///////////////////////////////////////////////////////////////////////////////
-Route::post('/tmp', [RouteController::class, 'tmp'])->name('tmp');
+Route::match(['get','post'],'/tmp', [RouteController::class, 'tmp'])->name('tmp');

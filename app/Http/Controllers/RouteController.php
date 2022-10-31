@@ -20,9 +20,8 @@ class RouteController extends Controller
         return view('private_page ');
     }
     public function tmp(){
-
         $user = Auth::user();
-        if($user['login']=='admin'){return view('tmp');}
+        if($user['login']=='admin'){return view('shop/shop_tmp');}
     }
 
     public function my_account(){
