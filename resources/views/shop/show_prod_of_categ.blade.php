@@ -7,8 +7,8 @@
 
 @section('basket')
     <li class="nav-item">
-        <a href="" class="nav-link srift">
-            <img src="../icons/shopping_bag_50px.png" width=25px; id="iconVHOD" alt="">Корзина</a></li>
+        <a href="{{'basket'}}" class="nav-link srift">
+            <img src="icons/shopping_bag_50px.png" width=25px; id="iconVHOD" alt="">Корзина</a></li>
 @endsection
 
 @section('menu')

@@ -21,7 +21,7 @@ class RouteController extends Controller
     }
     public function tmp(){
         $user = Auth::user();
-        if($user['login']=='admin'){return view('shop/shop_tmp');}
+        if($user['login']=='admin'){return view('tmp');}
     }
 
     public function my_account(){

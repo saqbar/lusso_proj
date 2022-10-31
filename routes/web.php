@@ -33,7 +33,9 @@ Route::controller(RegistrationController::class)->group(function(){
 Route::controller(ShopController::class)->group(function(){
     Route::get('/shop','shop_index')->name('shop');
     Route::get('/category/', 'show_prod_of_categ')->name('show_prod_of_categ');
-    Route::get('/product/', 'show_product')->name('show_product');
+    Route::match(['get','post'],'/product/', 'show_product')->name('show_product');
+
+    Route::match(['get','post'],'/basket', 'basket')->name('basket');
 });
 ///////////////////////////////////////////////////////////////////////////////
 /// adminka
