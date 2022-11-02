@@ -37,12 +37,12 @@
                         Качественная селекция профессиональных косметических уходовых средств,  Проверенная годами работы нашими мастерами,
                         Идеально подобранная именно для Вас...
                     </h6><br><br>
-                    <a href="#" >Перейти в каталог </a>
+                    <a href="#to_catalog" >Перейти в каталог </a>
                 </div>
             </section>
             <br>
 
-
+            <section id="to_catalog">
             <div id="wraper_card">
                 @foreach($allcategory as $category)
 
@@ -52,6 +52,7 @@
                     </a>
                 @endforeach
             </div>
+            </section>
 
 
 

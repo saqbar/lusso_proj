@@ -34,17 +34,17 @@
                 @csrf
                 <div class="form-group">
                     <label for="exampleInputName1">Ваше имя</label>
-                    <input type="text" class="form-control"  id="exampleInputName1" name="name">
+                    <input type="text" class="form-control input_vacancy"  id="exampleInputName1" name="name">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="exampleInputTel1">Телефон</label>
-                    <input type="text" class="form-control" id="exampleInputTel1" name="telefon">
+                    <input type="text" class="form-control input_vacancy" id="exampleInputTel1" name="telefon">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="exampleInputPoz1">Интересующая позиция</label>
-                    <input type="text" class="form-control" id="exampleInputPoz1" name="vacancy">
+                    <input type="text" class="form-control input_vacancy" id="exampleInputPoz1" name="vacancy">
                 </div>
                 <br>
                 <div class="form-group">

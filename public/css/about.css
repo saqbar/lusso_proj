@@ -8,19 +8,18 @@
     display: flex;
 }
 #fontext{
-    position: relative;
-    margin: 10% 5% auto auto;
+    /*position: relative;*/
+    /*margin: 10% 5% auto auto;*/
+flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    margin: auto;
 }
 #fontext h1,p{
     color: aliceblue;
 }
 
-@media screen and (min-width: 900px){
-  #fontext{
-    margin-left: 27%;
-    width: 600px;
-  }
-}
+
 
 .sect{
   background-color: #787878;
@@ -32,6 +31,5 @@
 }
 .sectCol{color: #f8f8f8;}
 
+.input_vacancy{ margin: auto; width: 350px;}
 
-
-.form_size{ width: 50px !important;}

@@ -1,5 +1,5 @@
 @extends('adminka/adminka_all')
-@section('title', 'add_user')
+@section('title', 'добавление пользователя в админку')
 @section('style')
     .form_login_admin{ text-align: center; margin-top:20px; margin-bottom:30px;}
     .inp {margin: 15px; text-align: center;}
