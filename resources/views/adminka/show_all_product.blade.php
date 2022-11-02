@@ -1,5 +1,5 @@
 @extends('adminka/adminka_all')
-@section('title', 'Админка')
+@section('title', 'Все товары')
 @section('style')
     .inp{margin: 15px; text-align: center;}
 @endsection

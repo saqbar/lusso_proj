@@ -59,6 +59,7 @@ class AdminkaController extends Controller
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
+    ///
     public function add_shop_category_product(){
         Gate::authorize('if_admin');
         return view('adminka/add_shop_category_product');
@@ -103,7 +104,8 @@ class AdminkaController extends Controller
                                 values (?,?,?,?,?,?)',[$category,$id_of_product,$name,$volume,$price,$description]);
         return redirect(route('add_shop_product'));
     }
-    // Все товары
+///////////////////////////////////////////////////////////////////////////////////////////
+//    // Все товары
     public function show_all_product(){
         Gate::authorize('if_admin');
         return view('adminka/show_all_product');
@@ -126,7 +128,30 @@ class AdminkaController extends Controller
             return redirect(route('show_all_product'));
         }
     }
-
+///////////////////////////////////////////////////////////////////////////////////////////
+/// Заказы
+    public function show_orders(Request $request){
+        Gate::authorize('if_admin');
+        if($request['update']){
+            DB::table('orders')->where('id',$request['id'])->update([
+                'name' => $request['name'],
+                'surname' => $request['surname'],
+                'telefon' => $request['telefon'],
+                'id_of_product' => $request['id_of_product'],
+                'name_of_prod' => $request['name_of_prod'],
+                'volume_of_prod' => $request['volume_of_prod'],
+                'price_of_prod' => $request['price_of_prod'],
+                ]);
+        }
+        elseif ($request['delete']){
+            DB::table('orders')->where('id', $request['id'])->delete();
+            return redirect(route('show_orders'));
+        }
+        else {
+            $orders = DB::select('select * from orders');
+            return view('adminka/show_orders', ['orders' => $orders]);
+        }
+    }
 
 
 }

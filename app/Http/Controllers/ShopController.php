@@ -64,6 +64,10 @@ class ShopController extends Controller
                             DB::insert('insert into orders (name, surname,telefon,id_of_product,name_of_prod,volume_of_prod,price_of_prod)
                                 values (?,?,?,?,?,?,?)',[$name,$surname,$telefon,$id_of_product,$name_of_prod,$volume_of_prod,$price_of_prod]);
                             setcookie($product->id_of_product, 'product', time() - 10, '/');
+                            echo "<h1 id='message_about_reg' style='color: red; text-align: center; margin: 20% 0 1500px 0;'>
+                                        Спасибо, в ближайшее время вашу заявку рассмотрят и перезвонят для подтверждения
+                                  </h1>";
+                            header( "refresh:3;url= /public/shop" );
                         }
                     }
                 }

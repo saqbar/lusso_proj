@@ -57,6 +57,8 @@ Route::controller(AdminkaController::class)->middleware('auth')->group(function 
     // все товары
     Route::get('adminka/show_all_product', 'show_all_product')->name('show_all_product');
     Route::post('adminka/edit_all_product', 'edit_all_product')->name('edit_all_product');
+    // Заказы
+    Route::match(['get','post'],'/adminka/show_orders', 'show_orders')->name('show_orders');
 });
 ///////////////////////////////////////////////////////////////////////////////
 Route::match(['get','post'],'/tmp', [RouteController::class, 'tmp'])->name('tmp');

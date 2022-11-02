@@ -49,7 +49,7 @@ next($_COOKIE);
 }
 ?>
 
-<form action="{{route('order')}}" method="post">
+<form action="@if(isset($products->id_of_product)) {{route('order')}} @endif" method="post">
     @csrf
     <button type="submit" name="order" value="true" class="btn btn-primary" style="width: 250px">Заказать</button>
 </form>

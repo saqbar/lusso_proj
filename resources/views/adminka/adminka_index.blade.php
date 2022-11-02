@@ -21,5 +21,6 @@
     <h5><a href="{{route('add_shop_category_product')}}">добавить бренд продукции</a></h5>
     <h5><a href="{{route('add_shop_product')}}">добавить продукцию</a></h5>
     <h5><a href="{{route('show_all_product')}}">Все товары</a></h5>
+    <h5><a href="{{route('show_orders')}}">Заказы</a></h5>
 </div>
 @endsection
