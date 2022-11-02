@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,6 +26,7 @@ class RouteController extends Controller
     }
 
     public function my_account(){
-        return view('my_account');
+        $my_user=Auth::user();
+        return view('my_account',['my_user'=>$my_user]);
     }
 }

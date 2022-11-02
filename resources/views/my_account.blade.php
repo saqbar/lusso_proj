@@ -14,4 +14,7 @@
 @endsection
 @section('content')
 <h1><a href="{{'logout'}}" style="color: red;">ДЕАВТОРИЗИРОВАТЬСЯ</a></h1>
+
+<h3>my login is: {{$my_user->login}}</h3>
+
 @endsection

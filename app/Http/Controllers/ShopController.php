@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
+
+
+
 
 class ShopController extends Controller
 {
@@ -39,6 +45,12 @@ class ShopController extends Controller
         }
         $poducts = DB::table('products')->select('*')->get();
         return view('shop/basket',['product'=>$poducts]);
+    }
+    public function comand_prod(){
+
+        return view('tmp');
+
+
     }
 
 
