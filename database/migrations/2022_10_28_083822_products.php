@@ -18,8 +18,8 @@ class Products extends Migration
             $table->string('category',255)->nullable(false);
             $table->string('id_of_product',255)->unique();
             $table->string('name',255)->nullable(false);
-            $table->string('volume',255);
-            $table->string('price',255);
+            $table->string('volume',255)->nullable();
+            $table->string('price',255)->nullable();
             $table->string('description',255);
             $table->timestamps();
         });

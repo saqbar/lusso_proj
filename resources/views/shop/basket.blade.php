@@ -49,9 +49,9 @@ next($_COOKIE);
 }
 ?>
 
-<form action="{{route('comand_prod')}}" method="post">
+<form action="{{route('order')}}" method="post">
     @csrf
-    <button type="submit" name="" value="" class="btn btn-primary" style="width: 250px">Заказать</button>
+    <button type="submit" name="order" value="true" class="btn btn-primary" style="width: 250px">Заказать</button>
 </form>
 
 
