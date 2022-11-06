@@ -1,17 +1,17 @@
 @charset "utf-8"; /*говорим что в стилях пишем в utf-8*/
 *{margin: 0;padding: 0; outline: none !important;font-size: 1em;} /*отступы=0  и нет обводки у поисковика */
-body{text-align: center !important; }
+body{text-align: center !important; font-family: Niagara, cursive !important; }
 a{text-decoration: none !important; color: black !important;}    /* убирает подчеркивание в ссылках*/
 a:hover{text-decoration: none!important; color: #4a5568;}
 /* Fonts */
 @font-face {
 font-family:'Niagara';
-src: url('/fonts/niagara.ttf') format('ttf');
+src: url('../fonts/niagara.ttf') format('ttf');
 
 }
 @font-face {
 font-family:'Arial';
-src: url('/fonts/arial.ttf') format('ttf');
+src: url('../fonts/arial.ttf') format('ttf');
 font-style: normal;
 font-weight: normal;
 }

@@ -65,11 +65,10 @@
 }
 
 .dd{
-  font-family: Niagara !important;
     color: aliceblue !important;
 }
 .ddd{
-  font-family: Arial !important;
+  /*font-family: Arial !important;*/
     color: aliceblue !important;
 }
 .Mycard{
@@ -79,7 +78,7 @@
 
 .btnVU{
     color: aliceblue !important;
-    font-family: Arial !important;
+    /*font-family: Arial !important;*/
     border: 1px solid aliceblue;
     border-radius: 15px;
 }
@@ -121,7 +120,7 @@ margin-top: 20px;
 }
 #logo_banner a{
     color: aliceblue !important;
-    font-family: Arial !important;
+    /*font-family: Arial !important;*/
     border: 1px solid aliceblue;
     border-radius: 15px;
     font-size: 1.5em;
