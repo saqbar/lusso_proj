@@ -99,11 +99,11 @@
     <div class="sotseti">
         <h3 class="footerColor">Социальные сети:</h3>
         <div class="sotS">
-            <img src="icons/instagram.png" width="32" height="32"alt="">
+            <img src="public/icons/instagram.png" width="32" height="32"alt="">
             <a href="#">instagram</a>
         </div>
         <div class="">
-            <img src="icons/facebook.png" width="32" height="32"alt="">
+            <img src="public/icons/facebook.png" width="32" height="32"alt="">
             <a href="#">facebook</a>
         </div>
 
