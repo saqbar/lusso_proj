@@ -18,6 +18,7 @@
 <div>
     <h5><a href="{{route('add_user')}}">добавление польз в админку</a></h5>
     <h5><a href="{{route('adminka_show_reg_usr')}}">пользователи</a></h5>
+    <h5><a href="{{route('add_filters')}}">разделы фильтра</a></h5>
     <h5><a href="{{route('add_shop_category_product')}}">добавить бренд продукции</a></h5>
     <h5><a href="{{route('add_shop_product')}}">добавить продукцию</a></h5>
     <h5><a href="{{route('show_all_product')}}">Все товары</a></h5>

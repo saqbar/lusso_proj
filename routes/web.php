@@ -59,6 +59,11 @@ Route::controller(AdminkaController::class)->middleware('auth')->group(function 
     Route::post('adminka/edit_all_product', 'edit_all_product')->name('edit_all_product');
     // Заказы
     Route::match(['get','post'],'/adminka/show_orders', 'show_orders')->name('show_orders');
+    // Фильтры
+    Route::get('adminka/add_filters', 'add_filters')->name('add_filters');
+    Route::post('adminka/execute_add_filters','execute_add_filters')->name('execute_add_filters');
+    Route::post('adminka/execute_one_to_many_filters','execute_one_to_many_filters')->name('execute_one_to_many_filters');
+    Route::post('adminka/execute_show_one_to_many_filters','execute_show_one_to_many_filters')->name('execute_show_one_to_many_filters');
 });
 ///////////////////////////////////////////////////////////////////////////////
 Route::match(['get','post'],'/tmp', [RouteController::class, 'tmp'])->name('tmp');

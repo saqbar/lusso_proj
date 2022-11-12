@@ -152,6 +152,57 @@ class AdminkaController extends Controller
             return view('adminka/show_orders', ['orders' => $orders]);
         }
     }
+///////////////////////////////////////////////////////////////////////////////////////////
+/// Фильтры
+/// вход на страничку добавления
+    public function add_filters(){
+        Gate::authorize('if_admin');
+        $filters_category = DB::select('select * from filters_category');
+        $filters_one_to_many_category = DB::select('select * from filters_one_to_many_category');
+        return view('adminka/filters_one_to_many_category',
+            ['filters_category'=>$filters_category, 'filters_one_to_many_category'=>$filters_one_to_many_category]);
+    }
+    //  добавление разделов фильтра
+    public function execute_add_filters(Request $request){
+        $name_categ_filt = $request['name_categ_filt'];
+        DB::insert('insert into filters_category (name_categ_filt)values (?)',[$name_categ_filt]);
+        return redirect(route('add_filters'));
+    }
+    // добавление подразделов фильтра
+    public function execute_one_to_many_filters(Request $request){
+        $name_categ_filt = $request['name_categ_filt'];
+        $name_one_categ = $request['name_one_categ'];
+        DB::insert('insert into filters_one_to_many_category (name_categ_filt,name_one_categ)values (?,?)',[$name_categ_filt,$name_one_categ]);
+        return redirect(route('add_filters'));
+    }
+    // список всех категорий фильтров
+    public function execute_show_one_to_many_filters(Request $request){
+        if($request['update']){
+            DB::table('filters_one_to_many_category')->where('id',$request['id'])->update([
+                'name_categ_filt' => $request['name_categ_filt'],
+                'name_one_categ'=>$request['name_one_categ']
+            ]);
+            return redirect(route('add_filters'));
+        }
+        elseif ($request['delete']){
+            DB::table('filters_one_to_many_category')->where('id', $request['id'])->delete();
+            return redirect(route('add_filters'));
+        }
+        elseif ($request['update_flt']){
+            DB::table('filters_category')->where('id',$request['id'])->update([
+                'name_categ_filt' => $request['name_categ_filt'],
+            ]);
+            return redirect(route('add_filters'));
+        }
+        elseif ($request['delete_flt']){
+            DB::table('filters_category')->where('id', $request['id'])->delete();
+            return redirect(route('add_filters'));
+        }
+
+
+    }
+
+
 
 
 }
