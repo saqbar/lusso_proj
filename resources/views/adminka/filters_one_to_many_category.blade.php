@@ -29,7 +29,7 @@
             <input type="text" class="" style="width: 305px;" id="formGroupExampleInput"  placeholder="Имя категории фильтра" name="name_categ_filt">
         </div>
 
-        <button type="submit" class="btn btn-primary">Подтвердить</button>
+        <button type="submit" class="btn btn-primary" onclick="alert('Поздравляю')">Подтвердить</button>
     </form><br>
     <hr>
 
@@ -52,13 +52,13 @@
             <input type="text" class="" style="width: 305px;" id="formGroupExampleInput"  placeholder="Имя подкатегории фильтра:" name="name_one_categ">
         </div>
 
-        <button type="submit" class="btn btn-primary">Подтвердить</button>
+        <button type="submit" class="btn btn-primary" onclick="alert('Поздравляю')">Подтвердить</button>
     </form><br>
     <hr>
-
+    <hr>
     {{--......................................................................................................--}}
     <section class="form_login_admin">
-        <h1>категории продукции:</h1>
+        <h1>Разделы фильтра:</h1>
 
 
         @foreach ($filters_category as $flt)
@@ -67,10 +67,10 @@
                 id:
                 <input type="text" name="id" class="inp" style="width: 105px;" value="{{$flt->id}}">
                 имя разделов фильтра:
-                <input type="text" name="name_categ_filt" class="inp" style="width: 105px;" value="{{$flt->name_categ_filt}}">
+                <input type="text" name="name_categ_filt" class="inp" style="width: 305px;" value="{{$flt->name_categ_filt}}">
 
-                <button type="submit" class="inp btn btn-primary" name="update_flt" value="update">Изменить</button>
-                <button type="submit" class="inp btn btn-primary" name="delete_flt" value="delete">Удалить</button>
+                <button type="submit" class="inp btn btn-primary" name="update_flt" value="update" onclick="alert('Изменено')">Изменить</button>
+                <button type="submit" class="inp btn btn-primary" name="delete_flt" value="delete" onclick="alert('Удалено')">Удалить</button>
                 <hr>
             </form>
 
@@ -80,7 +80,7 @@
     {{--......................................................................................................--}}
 
     <section class="form_login_admin">
-        <h1>категории продукции:</h1>
+        <h1>Подразделы фильтра:</h1>
 
 
         @foreach ($filters_one_to_many_category as $flt)
@@ -99,12 +99,13 @@
                    имя подраздела фильтра:
                    <input type="text" name="name_one_categ" class="inp" style="width: 105px;" value="{{$flt->name_one_categ}}">
 
-                   <button type="submit" class="inp btn btn-primary" name="update" value="update">Изменить</button>
-                   <button type="submit" class="inp btn btn-primary" name="delete" value="delete">Удалить</button>
+                   <button type="submit" class="inp btn btn-primary" name="update" value="update" onclick="alert('Изменено')">Изменить</button>
+                   <button type="submit" class="inp btn btn-primary" name="delete" value="delete" onclick="alert('Удалено')">Удалить</button>
                    <hr>
                    </form>
 
         @endforeach
 
     </section>
+    <hr>
 @endsection

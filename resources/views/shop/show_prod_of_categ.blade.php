@@ -38,57 +38,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
             {{--    выпадающий список--}}
+
+@if(isset($filters_category))
+    @foreach($filters_category as $filter)
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle color_filter" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Уход за кожей лица
+                        {{$filter->name_categ_filt}}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item color_filter" href="#">Очищения и тонизирования кожи лица</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Уход за областью вокруг глаз</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Антивозрастная косметика</a></li>
+                        @foreach($filters_one_to_many_category as $one_to_many)
+                        @if($filter->name_categ_filt=== $one_to_many->name_categ_filt)
+                                <li><a class="dropdown-item color_filter" href="#">{{$one_to_many->name_one_categ}}</a></li>
+                        @endif
+                        @endforeach
                     </ul>
                 </li>
             </ul>
-        {{--    выпадающий список--}}
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle color_filter" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Уход за телом
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item color_filter" href="#">Средства для тела</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Антицеллюлитные средства</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Средства для депиляции</a></li>
-                    </ul>
-                </li>
-            </ul>
-            {{--    выпадающий список--}}
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle color_filter" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Уход за волосами и ногтями
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item color_filter" href="#">Шампуни</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Средства от перхоти</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Для укрепления и профилактики выпадения волос</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Средства по уходу за ногтями</a></li>
-                    </ul>
-                </li>
-            </ul>
-            {{--    выпадающий список--}}
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle color_filter" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Аромакосметика
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item color_filter" href="#">Эфирные и прочие масла</a></li>
-                        <li><a class="dropdown-item color_filter" href="#">Прочая аромакосметика</a></li>
-                    </ul>
-                </li>
-            </ul>
+    @endforeach
+@else <p>укажите фильтр в админке </p>
+@endif
+
         </div>
     </div>
 </nav>

@@ -24,7 +24,9 @@ class ShopController extends Controller
     public function show_prod_of_categ(Request $request)
     {   $categ = $request['category'];
         $poducts = DB::table('products')->select('*')->where('category', $categ)->get();
-        return view('shop/show_prod_of_categ',['allproducts'=>$poducts]);
+        $filters_category = DB::select('select * from filters_category');
+        $filters_one_to_many_category = DB::select('select * from filters_one_to_many_category');
+        return view('shop/show_prod_of_categ',['allproducts'=>$poducts, 'filters_category'=>$filters_category, 'filters_one_to_many_category'=>$filters_one_to_many_category]);
     }
     // при выборе товара + передается в заголовке id товара
     public function show_product(Request $request){

@@ -164,12 +164,14 @@ class AdminkaController extends Controller
     }
     //  добавление разделов фильтра
     public function execute_add_filters(Request $request){
+        Gate::authorize('if_admin');
         $name_categ_filt = $request['name_categ_filt'];
         DB::insert('insert into filters_category (name_categ_filt)values (?)',[$name_categ_filt]);
         return redirect(route('add_filters'));
     }
     // добавление подразделов фильтра
     public function execute_one_to_many_filters(Request $request){
+        Gate::authorize('if_admin');
         $name_categ_filt = $request['name_categ_filt'];
         $name_one_categ = $request['name_one_categ'];
         DB::insert('insert into filters_one_to_many_category (name_categ_filt,name_one_categ)values (?,?)',[$name_categ_filt,$name_one_categ]);
@@ -177,6 +179,7 @@ class AdminkaController extends Controller
     }
     // список всех категорий фильтров
     public function execute_show_one_to_many_filters(Request $request){
+        Gate::authorize('if_admin');
         if($request['update']){
             DB::table('filters_one_to_many_category')->where('id',$request['id'])->update([
                 'name_categ_filt' => $request['name_categ_filt'],
