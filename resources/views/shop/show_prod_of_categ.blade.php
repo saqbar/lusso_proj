@@ -49,7 +49,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark">
                         @foreach($filters_one_to_many_category as $one_to_many)
                         @if($filter->name_categ_filt=== $one_to_many->name_categ_filt)
-                                <li><a class="dropdown-item color_filter" href="#">{{$one_to_many->name_one_categ}}</a></li>
+                                <li><a class="dropdown-item color_filter" href="{{route('show_filt_of_categ',['f'=>$one_to_many->id])}}">{{$one_to_many->name_one_categ}}</a></li>
                         @endif
                         @endforeach
                     </ul>

@@ -34,9 +34,11 @@ Route::controller(ShopController::class)->group(function(){
     Route::get('/shop','shop_index')->name('shop');
     Route::get('/category/', 'show_prod_of_categ')->name('show_prod_of_categ');
     Route::match(['get','post'],'/product/', 'show_product')->name('show_product');
-
+    //корзина
     Route::match(['get','post'],'/basket', 'basket')->name('basket');
     Route::post('/basket/order', 'order')->name('order');
+    //фильтры
+    Route::get('/cat/', 'show_filt_of_categ')->name('show_filt_of_categ');
 });
 ///////////////////////////////////////////////////////////////////////////////
 /// adminka
@@ -51,10 +53,10 @@ Route::controller(AdminkaController::class)->middleware('auth')->group(function 
     Route::get('adminka/add_shop_category_product', 'add_shop_category_product')->name('add_shop_category_product');
     Route::post('adminka/execute_add_shop_category_product', 'execute_add_shop_category_product')->name('execute_add_shop_category_product');
     Route::post('adminka/execute_edit_shop_category_product', 'execute_edit_shop_category_product')->name('execute_edit_shop_category_product');
-    // добавить продукцию
+// добавить продукцию
     Route::get('adminka/add_shop_product', 'add_shop_product')->name('add_shop_product');
     Route::post('adminka/execute_add_shop_product', 'execute_add_shop_product')->name('execute_add_shop_product');
-    // все товары
+// все товары
     Route::get('adminka/show_all_product', 'show_all_product')->name('show_all_product');
     Route::post('adminka/edit_all_product', 'edit_all_product')->name('edit_all_product');
     // Заказы

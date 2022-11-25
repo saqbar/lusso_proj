@@ -21,6 +21,7 @@ class Products extends Migration
             $table->string('volume',255)->nullable();
             $table->string('price',255)->nullable();
             $table->string('description',255);
+            $table->string('name_one_categ')->nullable();
             $table->timestamps();
         });
     }

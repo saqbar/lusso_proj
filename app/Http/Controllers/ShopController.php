@@ -79,5 +79,22 @@ class ShopController extends Controller
                     Пожалуйста зарегистрируйтесь или войдите в личный кабинет
               </h1>";}
     }
-//
+//  фильтры
+public function show_filt_of_categ(Request $request){
+    $filt = $request['f'];
+
+    $filter = DB::table('filters_one_to_many_category')->select('name_one_categ')->where('id', $filt)->get();
+    foreach ($filter as $f){
+        $flt=$f->name_one_categ;
+    }
+    $flt_of_pr=DB::table('products')->select('*')->where('name_one_categ', $flt)->get();
+
+    return view('shop/show_filt_of_categ',['flt'=>$flt, 'f_of_pr'=>$flt_of_pr]);
+}
+
+//shop/show_filt_of_categ
+
+
+
+
  }
